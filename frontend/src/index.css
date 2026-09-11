@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#F7FAFC] text-[#12355B] font-sans selection:bg-[#1769AA]/20 selection:text-[#12355B];
+    background-color: #F7FAFC;
+    background-image: 
+      radial-gradient(rgba(18, 53, 91, 0.06) 1px, transparent 1px),
+      radial-gradient(rgba(25, 181, 230, 0.04) 1px, #F7FAFC 1px);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+  }
+}
+
+/* Glassmorphism & Light Theme Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #E2E8F0;
+}
+
+.glass-panel:hover {
+  border-color: #CBD5E1;
+}
+
+.glow-subtle {
+  box-shadow: 0 4px 20px -2px rgba(18, 53, 91, 0.06);
+}
+
+/* Custom Sleek Light Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Live Heatmark & Thermal Shockwave Animations */
+@keyframes heat-shockwave {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+}
+
+.animate-heat-shockwave {
+  transform-origin: center;
+  animation: heat-shockwave 2.6s ease-in-out infinite;
+}
+
+@keyframes heat-beacon-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.85));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(239, 68, 68, 0.45));
+  }
+}
+
+.animate-heat-beacon {
+  animation: heat-beacon-glow 2s ease-in-out infinite;
+}
+
+/* Sliding Drawer Transitions */
+.drawer-slide {
+  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1), opacity 300ms ease, box-shadow 380ms ease;
+  will-change: transform, opacity;
+}
+
+/* High-end cyber glass styling */
+.cyber-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(18, 53, 91, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+.cyber-card-glow {
+  transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cyber-card-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -6px rgba(23, 105, 170, 0.12), 0 4px 10px -2px rgba(18, 53, 91, 0.04);
+}
+
+/* Leaflet Light Mode Overrides */
+.leaflet-container {
+  background-color: #F7FAFC !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #12355B !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 25px -5px rgba(18, 53, 91, 0.12), 0 10px 10px -5px rgba(18, 53, 91, 0.04) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.leaflet-tooltip {
+  background: #12355B !important;
+  color: #FFFFFF !important;
+  border: 1px solid #1769AA !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(18, 53, 91, 0.2) !important;
+  font-size: 11px !important;
+  font-family: monospace !important;
+  padding: 4px 8px !important;
+}
+
+.leaflet-tooltip-top:before {
+  border-top-color: #12355B !important;
+}
+
+.leaflet-tooltip-bottom:before {
+  border-bottom-color: #12355B !important;
+}
+
+.leaflet-tooltip-left:before {
+  border-left-color: #12355B !important;
+}
+
+.leaflet-tooltip-right:before {
+  border-right-color: #12355B !important;
+}
+
+.leaflet-bar {
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 6px -1px rgba(18, 53, 91, 0.08) !important;
+}
+
+.leaflet-bar a {
+  background-color: #FFFFFF !important;
+  color: #12355B !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: #F8FAFC !important;
+  color: #1769AA !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #64748B !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: #1769AA !important;
+}
+
+/* Custom Leaflet Thermal Heatmark Markers */
+.custom-thermal-marker {
+  background: transparent !important;
+  border: none !important;
+}
+
+.thermal-heatmark-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.thermal-heat-plume {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+
+.thermal-heat-plume-critical {
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.88) 0%, rgba(249, 115, 22, 0.55) 35%, rgba(245, 158, 11, 0.22) 65%, rgba(239, 68, 68, 0) 100%);
+  filter: blur(5px);
+}
+
+.thermal-heat-plume-high {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.82) 0%, rgba(251, 146, 60, 0.48) 40%, rgba(252, 211, 77, 0.2) 70%, rgba(245, 158, 11, 0) 100%);
+  filter: blur(4px);
+}
+
+.thermal-heat-plume-monitored {
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.75) 0%, rgba(56, 189, 248, 0.4) 40%, rgba(186, 230, 253, 0.15) 70%, rgba(2, 132, 199, 0) 100%);
+  filter: blur(3px);
+}
+
+.thermal-ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  animation: heat-ripple-wave 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  z-index: 2;
+}
+
+@keyframes heat-ripple-wave {
+  0% {
+    width: 16px;
+    height: 16px;
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+/* Green Topo Leaflet Enhancement */
+.leaflet-green-topo .leaflet-tile {
+  filter: saturate(1.22) contrast(1.04) brightness(1.01);
+}
